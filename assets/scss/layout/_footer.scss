@@ -1,0 +1,105 @@
+.footer {
+  background: $primary-red;
+  color: $text-white;
+  .container {
+    max-width: 1320px;
+    padding: 48px 12px 0;
+    margin: auto;
+    @include mobile-large {
+      padding-top: 24px;
+    }
+
+    .menu-list {
+      display: flex;
+      gap: 48px;
+      padding-top: 12px;
+      @include mobile-large {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        color: $text-white;
+        transition: 0.3s;
+        @include mobile-large {
+          font-size: 16px;
+        }
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+
+    .contact {
+      padding-top: 36px;
+      padding-bottom: 32px;
+
+      @include mobile-large {
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+
+      .material-symbols-outlined {
+        font-size: 36px;
+        vertical-align: baseline;
+        @include mobile-large {
+          font-size: 18px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $text-white;
+        font-size: 36px;
+        @include mobile-large {
+          font-size: 16px;
+        }
+      }
+    }
+    .social-list {
+      display: flex;
+      gap: 32px;
+      a {
+        display: block;
+        width: 48px;
+        @include mobile-large {
+          width: 24px;
+        }
+        img {
+          width: 100%;
+          vertical-align: top;
+        }
+      }
+    }
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+      padding: 32px 0;
+      border-top: 1px solid #fff;
+      @include mobile-large {
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 20px;
+        padding-bottom: 24px;
+      }
+      .txt {
+        display: flex;
+        gap: 48px;
+        @include mobile-large {
+          flex-direction: column;
+          gap: 8px;
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          transition: 0.3s;
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}

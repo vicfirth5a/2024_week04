@@ -1,0 +1,119 @@
+.section-stores-list {
+  padding: 100px 0 80px;
+  @include mobile-large {
+    padding: 40px 0 64px;
+  }
+  .container {
+    max-width: 1320px;
+    padding: 0 12px;
+  }
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    padding: 0 16px;
+    border-left: 8px solid $primary-red;
+    @include mobile-large {
+      font-size: 24px;
+    }
+  }
+  .select {
+    display: flex;
+    gap: 16px;
+    margin: 32px 0 40px;
+    label {
+      font-size: 24px;
+      @include mobile-large {
+        font-size: 16px;
+      }
+    }
+
+    select {
+      max-width: 304px;
+      width: 100%;
+      font-size: 18px;
+      color: #495057;
+      padding: 6px 12px;
+      border: 1px solid #ced4da;
+      @include mobile-large {
+        font-size: 18px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .stores-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 48px 24px;
+    @include pad {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile-large {
+      grid-template-columns: 1fr;
+    }
+    .store-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .pic {
+      a {
+        display: block;
+
+        transition: 0.3s;
+        &:hover {
+          filter: brightness(0.7);
+        }
+      }
+    }
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+
+    .txt {
+      flex-grow: 1;
+      border: 1px solid $border;
+
+      h3 {
+        padding: 8px 24px;
+        font-size: 24px;
+        border-bottom: 1px solid $border;
+      }
+      p {
+        display: flex;
+        align-items: start;
+        gap: 8px;
+      }
+      .contact {
+        padding: 16px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 20px;
+        // border: 1px solid $border;
+      }
+    }
+
+    .more {
+      border: 1px solid $border;
+      .btn {
+        display: block;
+        text-decoration: none;
+        color: $text-white;
+        background-color: #000;
+        text-align: center;
+        font-size: 19px;
+        padding: 16px 0;
+        width: 100%;
+        transition: 0.3s;
+        margin-top: auto;
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+}
